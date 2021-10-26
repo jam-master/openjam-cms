@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "songs",
+  "info": {
+    "name": "song",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "composer": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "qrcode": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "setlist": {
+      "via": "songs",
+      "model": "setlist"
+    },
+    "openjams": {
+      "via": "songs",
+      "collection": "openjam"
+    },
+    "downloads": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "sheet": {
+      "type": "text"
+    }
+  }
+}

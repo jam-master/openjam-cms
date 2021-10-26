@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/openmics",
+      "handler": "openmic.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/openmics/count",
+      "handler": "openmic.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/openmics/:id",
+      "handler": "openmic.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/openmics",
+      "handler": "openmic.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/openmics/:id",
+      "handler": "openmic.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/openmics/:id",
+      "handler": "openmic.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

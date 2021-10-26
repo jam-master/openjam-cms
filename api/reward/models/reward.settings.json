@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rewards",
+  "info": {
+    "name": "reward"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "points": {
+      "type": "integer"
+    },
+    "coins": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "badge",
+        "benefit",
+        "coins",
+        "gift",
+        "points"
+      ],
+      "default": "badge"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "users": {
+      "via": "rewards",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "openjams": {
+      "via": "rewards",
+      "collection": "openjam"
+    }
+  }
+}

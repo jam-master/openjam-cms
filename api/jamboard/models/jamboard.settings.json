@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jamboards",
+  "info": {
+    "name": "jamboard",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "round": {
+      "type": "component",
+      "repeatable": true,
+      "component": "boards.jam-board"
+    },
+    "openjam": {
+      "model": "openjam"
+    }
+  }
+}

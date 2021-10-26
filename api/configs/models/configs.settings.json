@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "configs",
+  "info": {
+    "name": "configs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "json": {
+      "type": "json"
+    }
+  }
+}

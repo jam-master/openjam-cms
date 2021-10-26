@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_stages_openjam_stages",
+  "info": {
+    "name": "openjam-stage",
+    "icon": "flag"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "streaming": {
+      "type": "string"
+    },
+    "jamboard": {
+      "model": "jamboard"
+    }
+  }
+}

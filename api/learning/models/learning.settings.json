@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "learnings",
+  "info": {
+    "name": "Learning"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "category": {
+      "model": "category"
+    },
+    "tips": {
+      "type": "text"
+    }
+  }
+}

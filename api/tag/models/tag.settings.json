@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "name": "tag",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "openjams": {
+      "via": "tags",
+      "collection": "openjam"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "openmics": {
+      "via": "tags",
+      "collection": "openmic",
+      "dominant": true
+    },
+    "partners": {
+      "collection": "partner",
+      "via": "tags",
+      "dominant": true
+    }
+  }
+}

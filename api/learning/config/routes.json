@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/learnings",
+      "handler": "learning.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/learnings/count",
+      "handler": "learning.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/learnings/:id",
+      "handler": "learning.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/learnings",
+      "handler": "learning.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/learnings/:id",
+      "handler": "learning.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/learnings/:id",
+      "handler": "learning.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

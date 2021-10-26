@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_boards_jam_boards",
+  "info": {
+    "name": "jam-board",
+    "icon": "chess",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "jammers": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "title": {
+      "type": "string"
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "song": {
+      "model": "song"
+    }
+  }
+}

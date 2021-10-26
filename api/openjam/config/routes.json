@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/openjams",
+      "handler": "openjam.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/openjams/count",
+      "handler": "openjam.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/openjams/:id",
+      "handler": "openjam.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/openjams",
+      "handler": "openjam.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/openjams/:id",
+      "handler": "openjam.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/openjams/:id",
+      "handler": "openjam.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

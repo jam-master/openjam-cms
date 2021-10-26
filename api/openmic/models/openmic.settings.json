@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "openmics",
+  "info": {
+    "name": "Open Mic",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "tags": {
+      "via": "openmics",
+      "collection": "tag"
+    },
+    "categories": {
+      "via": "openmics",
+      "collection": "category"
+    },
+    "adress": {
+      "type": "richtext"
+    },
+    "hoster": {
+      "type": "string"
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "capacity": {
+      "type": "integer"
+    },
+    "gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "frequency": {
+      "type": "enumeration",
+      "enum": [
+        "daily",
+        "weekly",
+        "monthly",
+        "yearly"
+      ]
+    },
+    "email": {
+      "type": "email"
+    },
+    "day": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "string"
+    },
+    "activated": {
+      "type": "boolean"
+    },
+    "checkins": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

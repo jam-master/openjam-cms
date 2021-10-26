@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partners",
+  "info": {
+    "name": "partner"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "adress": {
+      "type": "richtext"
+    },
+    "activated": {
+      "type": "boolean",
+      "default": false
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "openjams": {
+      "via": "partners",
+      "collection": "openjam",
+      "dominant": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "friend",
+        "investor",
+        "sponsor",
+        "support",
+        "staff"
+      ],
+      "default": "friend"
+    },
+    "tags": {
+      "via": "partners",
+      "collection": "tag"
+    }
+  }
+}

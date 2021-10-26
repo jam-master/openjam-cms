@@ -1,0 +1,117 @@
+{
+  "kind": "collectionType",
+  "collectionName": "openjams",
+  "info": {
+    "name": "Open Jam",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "jammers": {
+      "via": "openjams",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "category": {
+      "model": "category"
+    },
+    "songs": {
+      "via": "openjams",
+      "collection": "song",
+      "dominant": true
+    },
+    "setlist": {
+      "model": "setlist"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "gallery": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "adress": {
+      "type": "richtext"
+    },
+    "capacity": {
+      "type": "integer"
+    },
+    "subscription": {
+      "type": "string"
+    },
+    "activated": {
+      "type": "boolean",
+      "default": false
+    },
+    "tags": {
+      "via": "openjams",
+      "collection": "tag",
+      "dominant": true
+    },
+    "partners": {
+      "via": "openjams",
+      "collection": "partner"
+    },
+    "rewards": {
+      "collection": "reward",
+      "via": "openjams",
+      "dominant": true
+    },
+    "rules": {
+      "type": "richtext"
+    },
+    "categories": {
+      "via": "openjams",
+      "collection": "category"
+    },
+    "jamboard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "boards.jam-board"
+    },
+    "checkins": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "Stages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "stages.openjam-stage"
+    },
+    "jamboards": {
+      "collection": "jamboard"
+    }
+  }
+}

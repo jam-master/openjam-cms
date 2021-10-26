@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 3
+    },
+    "openjams": {
+      "via": "categories",
+      "collection": "openjam",
+      "dominant": true
+    },
+    "openmics": {
+      "via": "categories",
+      "collection": "openmic",
+      "dominant": true
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}

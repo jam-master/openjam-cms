@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/jamboards",
+      "handler": "jamboard.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jamboards/count",
+      "handler": "jamboard.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jamboards/:id",
+      "handler": "jamboard.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/jamboards",
+      "handler": "jamboard.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/jamboards/:id",
+      "handler": "jamboard.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/jamboards/:id",
+      "handler": "jamboard.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

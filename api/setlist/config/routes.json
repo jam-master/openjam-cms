@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/setlists",
+      "handler": "setlist.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/setlists/count",
+      "handler": "setlist.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/setlists/:id",
+      "handler": "setlist.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/setlists",
+      "handler": "setlist.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/setlists/:id",
+      "handler": "setlist.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/setlists/:id",
+      "handler": "setlist.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

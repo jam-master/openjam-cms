@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_boards_openmic_boards",
+  "info": {
+    "name": "openmic-board",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "song": {
+      "type": "string"
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "jammers": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}
